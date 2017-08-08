@@ -1,0 +1,291 @@
+
+input, button, submit { border:none; }
+
+/* Score Color Animations */
+
+@-webkit-keyframes fadeItWrong {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #F44336; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+@-moz-keyframes fadeItWrong {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #F44336; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+@-o-keyframes fadeItWrong {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #F44336; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+
+@keyframes fadeItWrong {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #F44336; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+
+@-webkit-keyframes fadeItCorrect {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #4CAF50; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+@-moz-keyframes fadeItCorrect {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #4CAF50; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+@-o-keyframes fadeItCorrect {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #4CAF50; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+@keyframes fadeItCorrect {
+  0%   { background-color: #FFFFFF; color:#263238;}
+  50%  { background-color: #4CAF50; color:#ECEFF1;}
+  100% { background-color: #FFFFFF; color:#263238;}
+}
+
+.scorecorrect{
+    background-image:none !important;
+    -webkit-animation: fadeItCorrect 1s ease-in-out;
+       -moz-animation: fadeItCorrect 1s ease-in-out;
+         -o-animation: fadeItCorrect 1s ease-in-out;
+            animation: fadeItCorrect 1s ease-in-out;
+
+                display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid green;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.scorewrong{
+    background-image:none !important;
+    -webkit-animation: fadeItWrong 1s ease-in-out;
+       -moz-animation: fadeItWrong 1s ease-in-out;
+         -o-animation: fadeItWrong 1s ease-in-out;
+            animation: fadeItWrong 1s ease-in-out;
+
+                display: block;
+    height: 2px;
+    border: 0;
+    border-top: 1px solid red;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+
+/* MOBILE VIEW */
+
+@media screen and (max-width: 480px) {
+
+    .logobar{
+    text-align:center;
+    margin-top:10%;
+}
+
+.logobar img{
+    width:280px;
+}
+
+.smalllogobar{
+    text-align:center;
+    margin-top:0%;
+    margin-bottom:50px;
+}
+
+.smalllogobar img{
+    width:150px;
+}
+
+.playcont{
+    text-align:center;
+    margin:0 auto;
+}
+
+.playcont button{
+    margin-top:25%;
+    padding: .8em;
+    width:90%;
+    background-color:#31D8A0;
+    color:white;
+    border-radius: 5px;
+    font-size:1.4em;
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+}
+
+.playcont button:hover {
+    background-color:#24be8a;
+}
+
+.main{
+    text-align: center;
+}
+
+.gamecont{
+    max-width:900px;
+    margin: 0 auto;
+}
+
+.scoreboard{
+    text-align:center;
+    font-family: 'Ranchers', cursive;
+    line-height: 50px;
+    font-size:1.8rem;
+}
+.scoreinfo {
+  display: inline-block;
+  width: 40%;
+  color:#81D4FA;
+  text-align:center;
+  border-radius:50px 20px;
+}
+
+
+
+md-card{
+    text-align:center;
+}
+
+.ansbuts{
+    width:90%;
+    text-align:center;
+    font-size:1em;
+    color:#31D8A0;;
+    padding:0.5em 2em;
+    border-radius:1em;
+    background-color:white;
+    border: 1px solid #31D8A0;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin:5px;
+    cursor:pointer;
+}
+
+.ansbuts:hover{
+    background-color:#31D8A0;
+    color:white;
+}
+
+
+.finaltext {
+    font-family: 'Roboto', sans-serif;
+    color: #81D4FA;
+}
+
+.finalscore{
+    font-family: 'Ranchers', cursive;
+    color:#6441A4;
+    font-size:4em;
+}
+
+}
+
+/* BIGGER VIEW */
+
+@media screen and (min-width: 481px) {
+.logobar{
+    text-align:center;
+    margin-top:10%;
+}
+
+.logobar img{
+    width:280px;
+}
+
+.smalllogobar{
+    text-align:center;
+    margin-top:0%;
+    margin-bottom:50px;
+}
+
+.smalllogobar img{
+    width:150px;
+}
+
+.playcont{
+    text-align:center;
+    margin:0 auto;
+}
+
+.playcont button{
+    margin-top:10%;
+    padding: .8em 7em;
+    background-color:#31D8A0;
+    color:white;
+    border-radius: 5px;
+    font-size:1.4em;
+    transition: background-color 0.3s ease;
+    cursor:pointer;
+}
+
+.playcont button:hover {
+    background-color:#24be8a;
+}
+
+.main{
+    text-align: center;
+}
+
+.gamecont{
+    max-width:900px;
+    margin: 0 auto;
+}
+
+.scoreboard{
+    text-align:center;
+    font-family: 'Ranchers', cursive;
+    line-height: 50px;
+    font-size:2rem;
+}
+.scoreinfo {
+  display: inline-block;
+  width: 40%;
+  color:#81D4FA;
+  text-align:center;
+  border-radius:50px 20px;
+}
+
+
+
+md-card{
+    text-align:center;
+}
+
+.ansbuts{
+    min-width:20%;
+    text-align:center;
+    font-size:1em;
+    color:#31D8A0;;
+    padding:0.5em 2em;
+    border-radius:1em;
+    background-color:white;
+    border: 1px solid #31D8A0;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    margin:5px;
+    cursor:pointer;
+}
+
+.ansbuts:hover{
+    background-color:#31D8A0;
+    color:white;
+}
+
+
+.finaltext {
+    font-family: 'Roboto', sans-serif;
+    color: #81D4FA;
+}
+
+.finalscore{
+    font-family: 'Ranchers', cursive;
+    color:#6441A4;
+    font-size:4em;
+}
+
+}

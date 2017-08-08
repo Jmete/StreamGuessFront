@@ -1,0 +1,87 @@
+<div [ngClass]="logovar">
+  <a href="/streamguess">
+      <img class="logo" src="assets/images/StreamGuess.svg"/>
+  </a>
+</div>
+
+<div *ngIf="start === true" class="playcont">
+    <button (click) = "runGame()">
+        Play
+    </button>
+</div>
+<div *ngIf="start === false" class="gamecont">
+<div *ngIf="isFin === false" class='main'>
+<md-card>
+            <div class="scoreboard">
+            <span class="scoreinfo">Clips Left: {{testClips.length}}</span>
+            <span class="scoreinfo">Score: {{score}}</span>
+            </div>
+
+</md-card>
+<hr [ngClass]="scorecolor">
+<md-card>
+
+<video [src]="theLink" type="video/mp4" (load)="fakeAns(randStreamer())" width="100%" controls>
+                Your browser does not support the video tag.
+</video>
+
+            <button class="ansbuts" *ngFor="let but of fakeStreamers" (click)="onSelect(but)">
+                {{but}}
+            </button>
+
+
+</md-card>
+</div>
+<!--     <div *ngIf="isFin === false" class='main'>
+        <div class='scoreboard'>
+            <p>Clips Left: {{testClips.length}}</p>
+            <p>Score: {{score}}</p>
+
+            <h2>{{theAnswer}}</h2>
+            <h2>{{theLink}}</h2>
+        </div>
+
+        <div class='videocont' style="width:50%">
+            <video [src]="theLink" type="video/mp4" (load)="fakeAns(randStreamer())" width="100%" controls>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="ansbuts">
+            <button *ngFor="let but of fakeStreamers" (click)="onSelect(but)">
+                {{but}}
+            </button>
+        </div>
+
+
+    </div> -->
+
+    <div *ngIf="isFin === true">
+        <md-card>
+            <h1 class="finaltext">Congrats! You Scored:</h1>
+            <h1 class="finalscore">{{score}}</h1>
+        </md-card>
+
+        <div class="playcont">
+        <a href="/streamguess">
+        <button>
+            Play Again
+        </button>
+        </a>
+        </div>
+
+    </div>
+
+<!--
+    <ul>
+        <li *ngFor="let streamer of testClips; let ind = index">
+            {{streamer.name}}
+        </li>
+    </ul> -->
+</div>
+
+
+
+
+
+

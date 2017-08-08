@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  isInfo = false;
+  info:boolean = true;
+
+  switch(){
+      this.info = !this.info;
+  }
+
+
 }

@@ -1,0 +1,53 @@
+.smalllogobar{
+    text-align:center;
+    margin-top:0%;
+    margin-bottom:50px;
+}
+
+.smalllogobar img{
+    width:150px;
+}
+
+.infocont{
+
+    width:96%;
+    max-width:900px;
+    text-align: center;
+    margin:0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.inforow{
+    text-align: center;
+}
+
+.inforow a{
+    text-decoration: none;
+}
+
+.infotitles{
+    color:#81D4FA;
+    font-size:2em;
+}
+
+.infotext{
+    color:black;
+    text-align:left;
+    max-width:600px;
+    margin:0 auto;
+
+}
+
+.contactz{
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    font-size:1.4em;
+    color:#31D8A0;
+}
+
+md-grid-list{
+}
+
+md-grid-tile{
+    border: 1px solid black;
+}
