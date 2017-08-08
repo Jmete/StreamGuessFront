@@ -2,6 +2,8 @@
 
 StreamGuess is a web app guessing game where players are presented random popular Twitch.tv clips, and they must guess which streamer it is.
 
+View the site at: www.jamesmete.com/streamguess
+
 The app is split into 2 main parts:
 
 1) Angular Front-End: This acts as the client for the game. The code here is focused on the Angular 4 Client. Written in Typescript, Javascript, CSS, HTML.
@@ -9,6 +11,11 @@ The app is split into 2 main parts:
 2) Node.js & Python based Back-end server: A custom REST API to deploy the streamers and clips hosted on AWS. Python scripts running as a CronTab job query the Twitch API to gather the streamer data and construct urls that lead to the .mp4 files of the clips in order to hide any information that could give away the answer. The API stores info on AWS using MongoDB.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.0.
+
+# Author
+
+James Mete
+www.jamesmete.com
 
 ## Development server
 
