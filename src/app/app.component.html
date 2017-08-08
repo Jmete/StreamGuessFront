@@ -1,13 +1,13 @@
+<!-- Top Info Button -->
 <div class="topbar">
     <a (click)="switch()" *ngIf="info" routerLink="./info" routerLinkActive="active">Info</a>
     <a (click)="switch()" *ngIf="!info" routerLink="./" routerLinkActive="active">Close Info</a>
 </div>
 
-<!-- <a routerLink="/info">Info</a>
-<a routerLink="/game"  (activate)="runGame()">Game</a>
-<br>-->
+<!-- Router Outlet -->
 <router-outlet></router-outlet>
-<!-- <app-game></app-game> -->
+
+<!-- Footer Copyright -->
 <div style="text-align: center; opacity: 0.7; margin-top:40px;">
     <a style="text-decoration: none;" href="http://www.jamesmete.com">
         &copy; James Mete 2017

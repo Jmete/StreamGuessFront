@@ -10,16 +10,15 @@ import { StreamerService } from '../streamer.service'
 export class GameComponent implements OnInit {
 
     shuffleArray = function(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
+        // Shuffles array to hide answers
+        for (var i = array.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+            return array;
     }
-        return array;
-    }
-
-   // var clips
 
 
     testClips = [];
@@ -35,6 +34,7 @@ export class GameComponent implements OnInit {
 
 
     randStreamer = function(){
+        // Removes and Returns a random streamer from array
         var clipLen = this.testClips.length
         var num
         var newStreamer = [];
@@ -50,6 +50,7 @@ export class GameComponent implements OnInit {
     }
 
     fakeAns = function(realStreamer){
+        // Returns answers with 3 false, and 1 correct.
         this.fakeStreamers = [];
         var clipLen = this.fakeClips.length
         var num
@@ -79,6 +80,7 @@ export class GameComponent implements OnInit {
     }
 
     onSelect = function(but){
+        // Validates answers and keeps track of score.
         this.scorecolor = "";
         if(this.theAnswer == but){
             this.score += 1;
@@ -105,6 +107,7 @@ export class GameComponent implements OnInit {
 
 
     runGame = function(){
+        // Starts the game.
         this.fakeAns(this.randStreamer());
         this.start = false;
         this.logovar = "smalllogobar";

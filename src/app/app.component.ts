@@ -10,6 +10,7 @@ export class AppComponent {
   isInfo = false;
   info:boolean = true;
 
+  // Switches info button
   switch(){
       this.info = !this.info;
   }
